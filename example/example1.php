@@ -8,14 +8,14 @@ $_mysql->query("INSERT INTO konto (1510, 4984.30, 1052);");
 
 function func($sql) {
 	while ($row = mysql_metch_row($sql)) {
-		if ($row['id'] < 0) {
+		if ($row['value'] < 0) {
 			return false;
 		}
 	}
 	return true;
 }
 
-$funcObject = func($sql);
+$funcObject = &func($sql);
 
 $_mysql->transaction('
 	UPDATE SET value=value+34579.84 WHERE userid = 1045;
