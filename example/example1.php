@@ -7,7 +7,7 @@ $_mysql->query("INSERT INTO konto (1500, 636.0, 1045);");
 $_mysql->query("INSERT INTO konto (1510, 4984.30, 1052);");
 
 function func($sql) {
-	while ($row = mysql_metch_row($sql)) {
+	while ($row = mysql_fetch_row($sql)) {
 		if ($row['value'] < 0) {
 			return false;
 		}
