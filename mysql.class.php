@@ -27,7 +27,7 @@ class mysql {
 
 	/**
 		@param (String) query SQL-Query
-		@return (Array) data SQL-Daten als Assitiativ
+		@return (Array) data SQL-Daten als Assitiativ Array
 	*/
 	public function row($q) {
 		$sql = $this->query($q);
@@ -40,7 +40,7 @@ class mysql {
 
 	/**
 		@param (String) query SQL-Query
-		@return (Array) data SQL-Daten als Assitiativ
+		@return (Array) data SQL-Daten als Assitiativ Array
 	*/
 	public function assoc($q) {
 		$sql = $this->query($q);
